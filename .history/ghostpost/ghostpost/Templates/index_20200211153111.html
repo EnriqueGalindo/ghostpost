@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {% for post in posts %}
+    <ul>
+        <li>
+            <strong>{{post.screen_name}}</strong>
+            <br></br>
+             {{post.message}}
+             <br></br>
+             <button>
+                <a href="/upvote/">upvote</a>
+            </button>
+            <button>
+                <a href="/upvote/">upvote</a>
+            </button>
+        </li>
+    </ul>
+    {% endfor %}
+    <button>
+        <a href="/message/">message</a>
+    </button>
+</body>
+</html>
