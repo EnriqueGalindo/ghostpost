@@ -19,7 +19,10 @@ from .views import (
     message_board_view,
     write_post_view,
     upvote,
-    downvote
+    downvote,
+    just_boast_view,
+    order_like_view,
+    just_roast_view
 )
 
 urlpatterns = [
@@ -27,5 +30,8 @@ urlpatterns = [
     path('', message_board_view, name="home"),
     path('message/', write_post_view),
     path('upvote/<int:id>/', upvote),
-    path('downvote/<int:id>', downvote)
+    path('downvote/<int:id>', downvote),
+    path('boast/', just_boast_view),
+    path('roast/', just_roast_view),
+    path('like/', order_like_view),
 ]
